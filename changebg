@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ -z "$1" ]];then
+	echo "Usage: "
+	echo "changebg <color name>"
+
+	echo -e "\nList of colors:"
+	echo 'https://manpages.ubuntu.com/manpages/bionic/man3/Color::Library::Dictionary::X11.3pm.html'
+else
+	echo -ne "\e]11;$1\a"
+fi
